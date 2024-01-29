@@ -3,15 +3,19 @@ package com.example.challenge;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import java.sql.*;
 
-@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
+
+//@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
+@SpringBootApplication
+@EnableJpaRepositories
 public class ChallengeApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ChallengeApplication.class, args);
-        try{
+       /* try{
             Connection connexion = DriverManager.getConnection(
                     "jdbc:mysql://127.0.0.1:3306/myDatabase",
                     "root",
@@ -24,7 +28,7 @@ public class ChallengeApplication {
             }
         }catch (SQLException e){
             e.printStackTrace();
-        }
+        }*/
 
 
          }
