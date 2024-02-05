@@ -12,6 +12,7 @@ import java.sql.*;
 //@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
 @SpringBootApplication
 @EnableJpaRepositories
+@EnableScheduling
 public class ChallengeApplication {
 
     public static void main(String[] args) {
